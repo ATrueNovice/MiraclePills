@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//UIPickerViewDataSource And View Delegate allows us to tell the app that the function will give the title to the picker
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var statePicker: UIPickerView!
@@ -28,6 +28,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 
     @IBAction func stateBtnPressed(_ sender: Any) {
+        //shows the picker view that was originally hidden
+        statePicker.isHidden = false
+        
     
     }
     // Columns
@@ -43,6 +46,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //returns the states in the array by name.
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return states[row]
+    }
+    
+    //What happens when you select a row
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        //Changes the button text to the state that was selected in the picker
+        statePickerBtn.setTitle(states[row], for: UIControlState.normal)
+        //Hides the picker after selection
+        statePicker.isHidden = true
     }
 }
 
