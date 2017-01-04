@@ -74,9 +74,8 @@
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yq-GS-1dh">
-                                <rect key="frame" x="40" y="460" width="334" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yq-GS-1dh">
+                                <rect key="frame" x="40" y="448.66666666666669" width="334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -108,23 +107,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20t-sn-8Pm">
-                                <rect key="frame" x="56" y="491" width="302" height="225"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMS-nr-CaP">
+                                <rect key="frame" x="40" y="477.66666666666663" width="128" height="5"/>
+                                <state key="normal" title="Choose Your State"/>
+                                <connections>
+                                    <action selector="stateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DFM-ty-697"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20t-sn-8Pm">
+                                <rect key="frame" x="47" y="515.66666666666663" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ke7-r2-elq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="0zJ-ZR-ueO"/>
                             <constraint firstItem="b8M-up-NEG" firstAttribute="top" secondItem="qj7-Sk-oLS" secondAttribute="bottom" constant="14" id="5K4-Qj-CPj"/>
+                            <constraint firstItem="1Yq-GS-1dh" firstAttribute="leading" secondItem="Ye5-gk-hDq" secondAttribute="leading" id="5dQ-7V-HSU"/>
+                            <constraint firstItem="1Yq-GS-1dh" firstAttribute="top" secondItem="Ye5-gk-hDq" secondAttribute="bottom" constant="8" id="8mu-7K-QHH"/>
                             <constraint firstItem="n6g-3E-i6r" firstAttribute="trailing" secondItem="rVS-rH-N4p" secondAttribute="trailing" id="ABx-lp-TDR"/>
                             <constraint firstItem="Ye5-gk-hDq" firstAttribute="leading" secondItem="7uv-fb-j1C" secondAttribute="leading" id="DFz-xi-e7I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kAR-fv-gzc" secondAttribute="trailing" constant="20" id="DUV-JL-BKX"/>
                             <constraint firstItem="kAR-fv-gzc" firstAttribute="centerX" secondItem="qFF-SJ-UCB" secondAttribute="centerX" id="EuI-6x-TRd"/>
+                            <constraint firstItem="nMS-nr-CaP" firstAttribute="top" secondItem="1Yq-GS-1dh" secondAttribute="bottom" constant="8" id="Ev3-kv-tFT"/>
                             <constraint firstItem="qj7-Sk-oLS" firstAttribute="trailing" secondItem="kAR-fv-gzc" secondAttribute="trailing" id="GEt-gk-c5N"/>
+                            <constraint firstItem="20t-sn-8Pm" firstAttribute="top" secondItem="nMS-nr-CaP" secondAttribute="bottom" constant="8" id="IVE-a3-YFg"/>
                             <constraint firstItem="n6g-3E-i6r" firstAttribute="top" secondItem="rVS-rH-N4p" secondAttribute="bottom" constant="8" id="Meh-3b-0sW"/>
                             <constraint firstItem="qj7-Sk-oLS" firstAttribute="top" secondItem="kAR-fv-gzc" secondAttribute="bottom" constant="11" id="OVF-fb-ZMS"/>
                             <constraint firstItem="7uv-fb-j1C" firstAttribute="leading" secondItem="n6g-3E-i6r" secondAttribute="leading" id="PyF-cE-EiC"/>
+                            <constraint firstItem="nMS-nr-CaP" firstAttribute="leading" secondItem="1Yq-GS-1dh" secondAttribute="leading" id="S59-6p-FHI"/>
                             <constraint firstItem="cIf-XC-wJJ" firstAttribute="top" secondItem="Ke7-r2-elq" secondAttribute="bottom" constant="25" id="UQ5-CQ-9uM"/>
                             <constraint firstItem="Ye5-gk-hDq" firstAttribute="top" secondItem="7uv-fb-j1C" secondAttribute="bottom" constant="8" id="VE0-q2-ZVS"/>
                             <constraint firstItem="7uv-fb-j1C" firstAttribute="trailing" secondItem="n6g-3E-i6r" secondAttribute="trailing" id="VRC-tz-cGq"/>
@@ -136,6 +146,7 @@
                             <constraint firstItem="qj7-Sk-oLS" firstAttribute="leading" secondItem="kAR-fv-gzc" secondAttribute="leading" id="gCl-Nf-FdR"/>
                             <constraint firstItem="b8M-up-NEG" firstAttribute="trailing" secondItem="qj7-Sk-oLS" secondAttribute="trailing" id="gMz-p6-h1b"/>
                             <constraint firstItem="Ye5-gk-hDq" firstAttribute="trailing" secondItem="7uv-fb-j1C" secondAttribute="trailing" id="hp5-Iu-doA"/>
+                            <constraint firstItem="1Yq-GS-1dh" firstAttribute="trailing" secondItem="Ye5-gk-hDq" secondAttribute="trailing" id="iV8-qe-Yag"/>
                             <constraint firstItem="b8M-up-NEG" firstAttribute="leading" secondItem="qj7-Sk-oLS" secondAttribute="leading" id="kKw-Cd-45u"/>
                             <constraint firstItem="qFF-SJ-UCB" firstAttribute="top" secondItem="cIf-XC-wJJ" secondAttribute="bottom" constant="8" symbolic="YES" id="kf1-d6-l3H"/>
                             <constraint firstItem="rVS-rH-N4p" firstAttribute="top" secondItem="b8M-up-NEG" secondAttribute="bottom" constant="8" id="lnr-XE-qba"/>
@@ -143,8 +154,13 @@
                             <constraint firstItem="7uv-fb-j1C" firstAttribute="top" secondItem="n6g-3E-i6r" secondAttribute="bottom" constant="8" id="pRz-tK-JSl"/>
                             <constraint firstItem="Ke7-r2-elq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qUh-Wp-dXK"/>
                             <constraint firstItem="n6g-3E-i6r" firstAttribute="leading" secondItem="rVS-rH-N4p" secondAttribute="leading" id="riQ-Sh-u7i"/>
+                            <constraint firstItem="20t-sn-8Pm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tNV-cV-Hy6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statePicker" destination="20t-sn-8Pm" id="4Rr-n9-4vA"/>
+                        <outlet property="statePickerBtn" destination="nMS-nr-CaP" id="wEf-dn-42S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
